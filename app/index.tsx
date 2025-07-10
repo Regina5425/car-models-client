@@ -1,23 +1,16 @@
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+
+import '../src/styles/global.css';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={{ fontFamily: 'Inter', fontSize: 24 }}>Open up App.tsx to start working on your app!</Text>
+    <View className='flex-1 items-center justify-center bg-white'>
+      <Text className='text-[24px]'>Open up App.tsx to start working on your app!</Text>
       <Link href={'/login'}>Go to login</Link>
-      <StatusBar style="auto" />
+      <StatusBar style='auto' />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

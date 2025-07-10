@@ -9,8 +9,9 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
+      "@/*": ["src/*"],
+      "@app/*": ["app/*"]
+    }
   },
   "extends": "expo/tsconfig.base"
 }
