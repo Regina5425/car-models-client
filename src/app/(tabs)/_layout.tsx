@@ -3,18 +3,28 @@ import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
 
 import { CartIcon, FavouritesIcon, HomeIcon, UserIcon } from '@/assets/icons';
+import { useTheme } from '@/providers/ThemeProvider';
 
 export default function TabLayout() {
+  const { theme } = useTheme();
+
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#FF8368',
+        tabBarActiveTintColor: theme.colors.accent,
         headerShown: false,
-        // tabBarShowLabel: false,
+        tabBarShowLabel: false,
+        tabBarIconStyle: {
+          marginTop: 7,
+          marginBottom: 5,
+        },
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            backgroundColor: theme.colors.tabbar,
+          },
+          android: {
+            backgroundColor: theme.colors.tabbar,
           },
           default: {},
         }),
