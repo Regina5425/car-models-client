@@ -1,16 +1,50 @@
-import { Stack } from 'expo-router';
+import { useCallback, useEffect, useState } from 'react';
+
+import { SplashScreen, Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { ThemeProvider } from '@/providers/ThemeProvider';
+
+SplashScreen.preventAutoHideAsync();
+
 export default function RootLayout() {
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        // Здесь можно загружать шрифты, делать API запросы и т.д.
+      } catch (err) {
+        console.warn(err);
+      } finally {
+        setAppIsReady(true);
+      }
+    }
+
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (appIsReady) {
+      await SplashScreen.hideAsync();
+    }
+  }, [appIsReady]);
+
+  if (!appIsReady) {
+    return null;
+  }
+
   return (
-    <SafeAreaProvider>
-      <Stack>
-        <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-        <Stack.Screen name='+not-found' />
-      </Stack>
-      <StatusBar style='auto' />
-    </SafeAreaProvider>
+    <ThemeProvider>
+      <SafeAreaProvider onLayout={onLayoutRootView}>
+        <Stack>
+          <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+          <Stack.Screen name='+not-found' />
+        </Stack>
+        <StatusBar style='auto' />
+      </SafeAreaProvider>
+    </ThemeProvider>
   );
 }
