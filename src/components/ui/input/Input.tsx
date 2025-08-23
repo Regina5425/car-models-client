@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width: 330,
     height: 50,
     borderRadius: Radius.r8,
-    fontSize: Font.f14,
+    fontSize: Font.sm,
   },
   eyeIcon: {
     position: 'absolute',
