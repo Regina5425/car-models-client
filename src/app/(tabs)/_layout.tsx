@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 
-import { Platform } from 'react-native';
+import { View } from 'react-native';
 
 import { CartIcon, FavouritesIcon, HomeIcon, UserIcon } from '@/assets/icons';
 import { useTheme } from '@/providers/ThemeProvider';
@@ -18,16 +18,24 @@ export default function TabLayout() {
           marginTop: 7,
           marginBottom: 5,
         },
-        tabBarStyle: Platform.select({
-          ios: {
-            position: 'absolute',
-            backgroundColor: theme.colors.tabbar,
-          },
-          android: {
-            backgroundColor: theme.colors.tabbar,
-          },
-          default: {},
-        }),
+        tabBarStyle: {
+          position: 'absolute',
+          backgroundColor: theme.colors.tabbar,
+          borderTopLeftRadius: 30,
+          borderTopRightRadius: 30,
+          borderTopWidth: 0,
+          paddingTop: 4,
+        },
+        tabBarBackground: () => (
+          <View
+            style={{
+              backgroundColor: theme.colors.tabbar,
+              borderTopLeftRadius: 30,
+              borderTopRightRadius: 30,
+              overflow: 'hidden',
+            }}
+          />
+        ),
       }}
     >
       <Tabs.Screen

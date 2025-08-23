@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import { ThemeProvider } from '@/providers/ThemeProvider';
+import { QueryProvider, ThemeProvider } from '@/providers';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -37,14 +37,16 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider>
-      <SafeAreaProvider onLayout={onLayoutRootView}>
-        <Stack>
-          <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-          <Stack.Screen name='+not-found' />
-        </Stack>
-        <StatusBar style='auto' />
-      </SafeAreaProvider>
-    </ThemeProvider>
+    <QueryProvider>
+      <ThemeProvider>
+        <SafeAreaProvider onLayout={onLayoutRootView}>
+          <Stack>
+            <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+            <Stack.Screen name='+not-found' />
+          </Stack>
+          <StatusBar style='auto' />
+        </SafeAreaProvider>
+      </ThemeProvider>
+    </QueryProvider>
   );
 }
