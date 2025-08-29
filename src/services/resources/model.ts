@@ -1,5 +1,4 @@
-import { apiClient } from '../apiClient';
-import { MODEL_URL } from '../apiUrls';
+import { MODEL_URL, apiClient } from '../api';
 
 import { IBaseResponse, IModel } from '@/types';
 

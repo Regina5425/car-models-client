@@ -24,6 +24,11 @@ export interface IUser {
   role: IUserRole;
 }
 
+export interface ITokens {
+  accessToken: string;
+  refreshToken: string;
+}
+
 export interface IUserProfile extends IUser {
   favorites: {
     id: string;

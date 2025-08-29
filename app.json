@@ -31,7 +31,9 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Inter-Regular.ttf"],
+          "fonts": [
+            "./assets/fonts/Inter-Regular.ttf"
+          ],
           "android": {
             "fonts": [
               {
@@ -66,7 +68,8 @@
             ]
           }
         }
-      ]
+      ],
+      "expo-secure-store"
     ]
   }
 }
