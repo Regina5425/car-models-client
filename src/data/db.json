@@ -1,0 +1,134 @@
+[
+  {
+    "id": "audi-q7-001",
+    "name": "Audi Q7",
+    "description": "Просторный и технологичный SUV премиум-класса с полным приводом quattro",
+    "price": 85000,
+    "image": "https://images.unsplash.com/photo-1606152536278-5d0df1c8eb6f?w=800&h=600&fit=crop",
+    "createdAt": "2025-01-15T09:30:00.000Z",
+    "updatedAt": "2025-06-29T14:20:00.000Z",
+    "slug": "audi-q7",
+    "category": "audi"
+  },
+  {
+    "id": "audi-a6-002",
+    "name": "Audi A6",
+    "description": "Элегантный бизнес-седан с инновационной цифровой панелью приборов",
+    "price": 65000,
+    "image": "https://images.unsplash.com/photo-1606152536348-1c32d0f04c99?w=800&h=600&fit=crop",
+    "createdAt": "2025-02-10T11:15:00.000Z",
+    "updatedAt": "2025-06-28T16:45:00.000Z",
+    "slug": "audi-a6",
+    "category": "audi"
+  },
+  {
+    "id": "bmw-x5-003",
+    "name": "BMW X5",
+    "description": "Мощный и динамичный SUV с фирменной решёткой радиатора и премиальным интерьером",
+    "price": 78000,
+    "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=600&fit=crop",
+    "createdAt": "2025-03-05T10:00:00.000Z",
+    "updatedAt": "2025-06-27T12:30:00.000Z",
+    "slug": "bmw-x5",
+    "category": "bmw"
+  },
+  {
+    "id": "bmw-3-series-004",
+    "name": "BMW 3 Series",
+    "description": "Легендарный спортивный седан с идеальным соотношением комфорта и динамики",
+    "price": 52000,
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&h=600&fit=crop",
+    "createdAt": "2025-01-20T08:45:00.000Z",
+    "updatedAt": "2025-06-26T15:20:00.000Z",
+    "slug": "bmw-3-series",
+    "category": "bmw"
+  },
+  {
+    "id": "mercedes-gle-005",
+    "name": "Mercedes-Benz GLE",
+    "description": "Роскошный SUV с передовыми технологиями и непревзойдённым комфортом",
+    "price": 89000,
+    "image": "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?w=800&h=600&fit=crop",
+    "createdAt": "2025-04-12T14:20:00.000Z",
+    "updatedAt": "2025-06-25T10:10:00.000Z",
+    "slug": "mercedes-gle",
+    "category": "mercedes"
+  },
+  {
+    "id": "mercedes-e-class-006",
+    "name": "Mercedes-Benz E-Class",
+    "description": "Икона стиля и инноваций в классе бизнес-седанов премиум-сегмента",
+    "price": 72000,
+    "image": "https://images.unsplash.com/photo-1563720223880-4d93eef1f1c2?w=800&h=600&fit=crop",
+    "createdAt": "2025-02-28T13:30:00.000Z",
+    "updatedAt": "2025-06-24T09:45:00.000Z",
+    "slug": "mercedes-e-class",
+    "category": "mercedes"
+  },
+  {
+    "id": "toyota-camry-007",
+    "name": "Toyota Camry",
+    "description": "Надёжный и экономичный седан с современным дизайном и гибридной опцией",
+    "price": 32000,
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&h=600&fit=crop",
+    "createdAt": "2025-05-18T16:40:00.000Z",
+    "updatedAt": "2025-06-23T11:25:00.000Z",
+    "slug": "toyota-camry",
+    "category": "toyota"
+  },
+  {
+    "id": "toyota-rav4-008",
+    "name": "Toyota RAV4",
+    "description": "Популярный компактный кроссовер с полным приводом и отличной проходимостью",
+    "price": 38000,
+    "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&h=600&fit=crop",
+    "createdAt": "2025-03-22T12:15:00.000Z",
+    "updatedAt": "2025-06-22T14:50:00.000Z",
+    "slug": "toyota-rav4",
+    "category": "toyota"
+  },
+  {
+    "id": "honda-civic-009",
+    "name": "Honda Civic",
+    "description": "Культовый компактный автомобиль с спортивным характером и экономичным двигателем",
+    "price": 28000,
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&h=600&fit=crop",
+    "createdAt": "2025-06-08T10:30:00.000Z",
+    "updatedAt": "2025-06-29T08:15:00.000Z",
+    "slug": "honda-civic",
+    "category": "honda"
+  },
+  {
+    "id": "honda-crv-010",
+    "name": "Honda CR-V",
+    "description": "Практичный и вместительный кроссовер с гибридной силовой установкой",
+    "price": 35000,
+    "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&h=600&fit=crop",
+    "createdAt": "2025-04-30T15:25:00.000Z",
+    "updatedAt": "2025-06-28T17:40:00.000Z",
+    "slug": "honda-crv",
+    "category": "honda"
+  },
+  {
+    "id": "tesla-model3-011",
+    "name": "Tesla Model 3",
+    "description": "Инновационный электромобиль с автопилотом и молниеносным разгоном",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop",
+    "createdAt": "2025-05-25T09:10:00.000Z",
+    "updatedAt": "2025-06-27T13:55:00.000Z",
+    "slug": "tesla-model3",
+    "category": "tesla"
+  },
+  {
+    "id": "tesla-modelx-012",
+    "name": "Tesla Model X",
+    "description": "Футуристический электрический SUV с крыльями сокола и автопилотом",
+    "price": 95000,
+    "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop",
+    "createdAt": "2025-06-12T14:00:00.000Z",
+    "updatedAt": "2025-06-29T10:05:00.000Z",
+    "slug": "tesla-modelx",
+    "category": "tesla"
+  }
+]

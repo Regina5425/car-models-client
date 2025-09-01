@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { CustomToast } from '@/components/ui';
 import { QueryProvider, ThemeProvider } from '@/providers';
 
 SplashScreen.preventAutoHideAsync();
@@ -42,9 +43,10 @@ export default function RootLayout() {
         <SafeAreaProvider onLayout={onLayoutRootView}>
           <Stack>
             <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-            <Stack.Screen name='+not-found' />
+            <Stack.Screen name='+not-found' options={{ headerShown: false }} />
           </Stack>
           <StatusBar style='auto' />
+          <CustomToast />
         </SafeAreaProvider>
       </ThemeProvider>
     </QueryProvider>

@@ -2,7 +2,7 @@ import { JSX, ReactNode } from 'react';
 
 import { ActivityIndicator, Pressable, PressableProps, StyleSheet, Text, View, ViewStyle } from 'react-native';
 
-import { Font, Gap } from '@/const';
+import { Font } from '@/const';
 import { useTheme } from '@/providers/ThemeProvider';
 
 type Props = {
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: Gap.g12,
+    gap: 12,
   },
   text: {
     fontSize: Font.sm,

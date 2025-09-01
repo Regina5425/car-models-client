@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, TextInput, TextInputProps, View } from 'react-na
 import EyeClosedIcon from '@/assets/icons/eye-closed';
 import EyeOpenedIcon from '@/assets/icons/eye-opened';
 import SearchIcon from '@/assets/icons/search';
-import { Font, Padding, Radius } from '@/const';
+import { Font, Radius } from '@/const';
 import { useTheme } from '@/providers/ThemeProvider';
 
 type Props = {
@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
-    padding: Padding.p16,
+    padding: 16,
     paddingRight: 42,
     width: 330,
     height: 50,
-    borderRadius: Radius.r8,
+    borderRadius: Radius.sm,
     fontSize: Font.sm,
   },
   eyeIcon: {

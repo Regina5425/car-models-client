@@ -66,3 +66,14 @@ export interface ICategory {
   createdAt?: Date;
   updatedAt?: Date;
 }
+
+// Toast
+export type CustomToastType = 'success' | 'error' | 'warning' | 'info';
+
+export interface IToastConfig {
+  type: CustomToastType;
+  text1: string;
+  text2?: string;
+  visibilityTime?: number;
+  position?: 'top' | 'bottom';
+}

@@ -8,6 +8,7 @@ export type Theme = {
     success: string;
     error: string;
     warning: string;
+    info: string;
     tabbar: string;
     white: string;
     input: string;
@@ -27,6 +28,7 @@ export const lightTheme: Theme = {
     success: '#209A1B',
     error: '#D80000',
     warning: '#F58110',
+    info: '#485E8A',
     tabbar: '#F0F1F2',
     white: '#FFFFFF',
     input: '#F9FAFC',
@@ -46,6 +48,7 @@ export const darkTheme: Theme = {
     success: '#1E8F1A',
     error: '#E93636',
     warning: '#F58110',
+    info: '#485E8A',
     tabbar: '#2D323A',
     white: '#FFFFFF',
     input: '#27282E',

@@ -2,6 +2,8 @@ import { apiClient } from '../api';
 import { deleteTokensStorage, getNewTokens } from './auth.helper';
 import { AxiosError, AxiosRequestConfig } from 'axios';
 
+import { toast } from '@/utils';
+
 interface CustomAxiosRequestConfig extends AxiosRequestConfig {
   _retry?: boolean;
 }
@@ -41,8 +43,7 @@ export const handleErrors = (error: AxiosError) => {
 
 const handleBadRequestError = (error: AxiosError, data: any) => {
   console.error('Error 400:', { data, error });
-  // TODO: toast
-  // showToast.error(data.message);
+  toast.error('Ошибка', data.message);
   return Promise.reject(error);
 };
 
@@ -57,8 +58,7 @@ const handleUnauthorizedError = async (error: AxiosError, data: any) => {
     return apiClient.request(originalRequest);
   } else {
     await deleteTokensStorage();
-    // TODO: toast
-    // showToast.error('Сессия истекла. Пожалуйста, войдите снова');
+    toast.error('Ошибка', 'Сессия истекла. Пожалуйста, войдите снова');
 
     return Promise.reject({
       type: 'auth',
@@ -71,8 +71,7 @@ const handleUnauthorizedError = async (error: AxiosError, data: any) => {
 
 export const handleForbidenError = (error: AxiosError, data: any) => {
   console.error('Error 403:', { data, error });
-  // TODO: toast
-  // showToast.error(data.message);
+  toast.error('Недостаточно прав', data.message);
 
   return Promise.reject({
     type: 'permission',
@@ -84,8 +83,7 @@ export const handleForbidenError = (error: AxiosError, data: any) => {
 
 export const handleNotFoundError = (error: AxiosError, data: any) => {
   console.error('Error 404:', { data, error });
-  // TODO: toast
-  // showToast.error(data.message);
+  toast.error('Ошибка', data.message);
 
   return Promise.reject({
     type: 'not_found',
@@ -97,8 +95,7 @@ export const handleNotFoundError = (error: AxiosError, data: any) => {
 
 const handleRateLimitError = (error: AxiosError, data: any) => {
   console.error('Error 429:', { data, error });
-  // TODO: toast
-  // showToast.error('Превышен лимит запросов. Попробуйте позже');
+  toast.error('Ошибка', 'Превышен лимит запросов. Попробуйте позже');
 
   return Promise.reject({
     type: 'rate_limit',
@@ -110,8 +107,7 @@ const handleRateLimitError = (error: AxiosError, data: any) => {
 
 const handleServerError = (error: AxiosError, data: any) => {
   console.error('Error 500:', { data, error });
-  // TODO: toast
-  // showToast.error('Ошибка сервера. Попробуйте позже.');
+  toast.error('Ошибка сервера. Попробуйте позже.');
 
   return Promise.reject({
     type: 'server',
@@ -123,8 +119,7 @@ const handleServerError = (error: AxiosError, data: any) => {
 
 export const handleNetworkError = (error: AxiosError) => {
   console.error('Network error:', error);
-  // TODO: toast
-  // showToast.error('Проверьте подключение к интернету');
+  toast.error('Ошибка', 'Проверьте подключение к интернету');
 
   return Promise.reject(error);
 };
